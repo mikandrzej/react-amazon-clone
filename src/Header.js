@@ -8,6 +8,7 @@ function Header() {
     <div className="header">
       <img
         className="header__logo"
+        alt=""
         src="https://onlinebusinessmanager.com/wp-content/uploads/2018/09/white-amazon-logo-png-6.png"
       />
 
