@@ -14,20 +14,47 @@ function Home() {
 
         <div className="home__row">
           <Product
+            id="123456"
             title="Nintendo Switch with Neon Blue and Neon Red Joy‑Con - HAC-001(-01)"
             image="https://images-na.ssl-images-amazon.com/images/I/61JnrafZ7zL._AC_SL1457_.jpg"
             rating={5}
             price={19.99}
           />
-          <Product />
+          <Product
+            title="Cyberpunk 2077 - PlayStation 4"
+            image="https://images-na.ssl-images-amazon.com/images/I/81iR0aGNJ5L._SL1500_.jpg"
+            rating={3}
+            price={49.99}
+          />
+          <Product
+            title="Mario Kart 8 Deluxe - Nintendo Switch"
+            image="https://images-na.ssl-images-amazon.com/images/I/91KQmjDxj-L._SL1500_.jpg"
+            rating={5}
+            price={59.9}
+          />
         </div>
         <div className="home__row">
-          <Product />
-          <Product />
-          <Product />
+          <Product
+            id="123456"
+            title="Nintendo Switch with Neon Blue and Neon Red Joy‑Con - HAC-001(-01)"
+            image="https://images-na.ssl-images-amazon.com/images/I/61JnrafZ7zL._AC_SL1457_.jpg"
+            rating={5}
+            price={19.99}
+          />
+          <Product
+            title="Cyberpunk 2077 - PlayStation 4"
+            image="https://images-na.ssl-images-amazon.com/images/I/81iR0aGNJ5L._SL1500_.jpg"
+            rating={3}
+            price={49.99}
+          />
         </div>
         <div className="home__row">
-          <Product />
+          <Product
+            title="Cyberpunk 2077 - PlayStation 4"
+            image="https://images-na.ssl-images-amazon.com/images/I/81iR0aGNJ5L._SL1500_.jpg"
+            rating={3}
+            price={49.99}
+          />
         </div>
       </div>
     </div>
