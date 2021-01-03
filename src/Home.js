@@ -21,12 +21,14 @@ function Home() {
             price={19.99}
           />
           <Product
+            id="1234567"
             title="Cyberpunk 2077 - PlayStation 4"
             image="https://images-na.ssl-images-amazon.com/images/I/81iR0aGNJ5L._SL1500_.jpg"
             rating={3}
             price={49.99}
           />
           <Product
+            id="12345678"
             title="Mario Kart 8 Deluxe - Nintendo Switch"
             image="https://images-na.ssl-images-amazon.com/images/I/91KQmjDxj-L._SL1500_.jpg"
             rating={5}
@@ -42,6 +44,7 @@ function Home() {
             price={19.99}
           />
           <Product
+            id="1234567"
             title="Cyberpunk 2077 - PlayStation 4"
             image="https://images-na.ssl-images-amazon.com/images/I/81iR0aGNJ5L._SL1500_.jpg"
             rating={3}
@@ -50,6 +53,7 @@ function Home() {
         </div>
         <div className="home__row">
           <Product
+            id="1234567"
             title="Cyberpunk 2077 - PlayStation 4"
             image="https://images-na.ssl-images-amazon.com/images/I/81iR0aGNJ5L._SL1500_.jpg"
             rating={3}

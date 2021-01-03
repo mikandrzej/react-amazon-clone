@@ -3,5 +3,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
 "editor.codeActionsOnSave": null,
-"files.autoSave": "afterDelay"
+"files.autoSave": "afterDelay",
+"files.autoSaveDelay": 5000
 }
