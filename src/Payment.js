@@ -29,7 +29,9 @@ function Payment() {
       const response = await axios({
         method: "post",
         //stripe expexts the total in a curenncies subunits
-        url: `/payments/create?total=${getBasketTotal(basket) * 100}`,
+        url: `/payments/create?currency=PLN&total=${
+          getBasketTotal(basket) * 100
+        }`,
       });
       setClientSecret(response.data.clientSecret);
     };

@@ -25,7 +25,7 @@ function Home() {
             title="Cyberpunk 2077 - PlayStation 4"
             image="https://images-na.ssl-images-amazon.com/images/I/81iR0aGNJ5L._SL1500_.jpg"
             rating={3}
-            price={49.99}
+            price={2.0}
           />
           <Product
             id="12345678"
