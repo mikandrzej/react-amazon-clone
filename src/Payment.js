@@ -1,9 +1,10 @@
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CurrencyFormat from "react-currency-format";
 import { Link, useHistory } from "react-router-dom";
+import instance from "./axios";
 import BasketItem from "./BasketItem";
+import { db } from "./firebase";
 import "./Payment.css";
 import { getBasketTotal } from "./reducer";
 import { useStateValue } from "./StateProvider";
@@ -26,7 +27,7 @@ function Payment() {
     //generate the special stripe secret which allows us to charge a customer
 
     const getClientSecret = async () => {
-      const response = await axios({
+      const response = await instance({
         method: "post",
         //stripe expexts the total in a curenncies subunits
         url: `/payments/create?currency=PLN&total=${
@@ -48,14 +49,29 @@ function Payment() {
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
+          billing_details: {
+            name: "Mikolaj Andrzejewski",
+          },
         },
       })
       .then(({ paymentIntent }) => {
         //payment intent = payment confirmation
 
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({ type: "EMPTY_BASKET" });
 
         history.replace("/orders");
       });
